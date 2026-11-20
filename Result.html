@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Result</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="bmi-container">
+        <h1>BMI Result</h1>
+        <p class="subtitle">Your personal health summary</p>
+
+        <div class="result-details">
+            <p><strong>Name:</strong> <span id="resultName"></span></p>
+            <p><strong>Age:</strong> <span id="resultAge"></span></p>
+            <p><strong>BMI:</strong> <span id="resultBMI"></span></p>
+            <p id="resultMessage"></p>
+        </div>
+
+        <button type="button" onclick="goBack()">Back to Calculator</button>
+    </div>
+
+    <script>
+        let data = JSON.parse(sessionStorage.getItem("userDetails"));
+        let result = JSON.parse(sessionStorage.getItem("bmiResult"));
+
+        if (data && result) {
+            document.getElementById("resultName").innerText = data.name;
+            document.getElementById("resultAge").innerText = data.age;
+            document.getElementById("resultBMI").innerText =
+                result.bmi !== undefined ? result.bmi : "Not calculated";
+            document.getElementById("resultMessage").innerText = result.message;
+        } else {
+            document.getElementById("resultMessage").innerText =
+                "No result found. Please calculate your BMI first.";
+        }
+
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>

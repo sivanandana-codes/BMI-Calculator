@@ -1,0 +1,6 @@
+
+myvenv312/
+__pycache__/
+*.pyc
+.vscode/
+.env

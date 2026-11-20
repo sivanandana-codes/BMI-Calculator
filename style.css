@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 16px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #edf5ff;
+    color: #263b53;
+}
+
+.bmi-container {
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #dce9f8;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(45, 91, 145, 0.12);
+}
+
+.bmi-container h1 {
+    margin: 0;
+    background: transparent;
+    color: #245b91;
+    font-size: 30px;
+    text-align: center;
+}
+
+.bmi-container .subtitle {
+    margin: 10px 0 24px;
+    color: #72839a;
+    text-align: center;
+    font-size: 14px;
+}
+
+.bmi-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bmi-container label {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #344b63;
+}
+
+.bmi-container input,
+.bmi-container select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #cbdced;
+    border-radius: 8px;
+    background: #f8fbff;
+    color: #263b53;
+    font-size: 15px;
+}
+
+.bmi-container input:focus,
+.bmi-container select:focus {
+    outline: 2px solid #a9d0ff;
+    border-color: #3478c8;
+}
+
+.bmi-container button {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: #3478c8;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bmi-container button:hover {
+    background: #245b9b;
+}
+
+.bmi-container .note {
+    margin: 20px 0 0;
+    text-align: center;
+    color: #8292a6;
+    font-size: 12px;
+}
+
+.result-details {
+    margin-top: 24px;
+    padding: 18px;
+    background: #f1f7ff;
+    border: 1px solid #dce9f8;
+    border-radius: 12px;
+}
+
+.result-details p {
+    margin: 12px 0;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+#resultBMI {
+    color: #245b91;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#resultMessage {
+    margin-top: 18px;
+    padding: 12px;
+    background: #ffffff;
+    border-radius: 8px;
+    color: #245b91;
+}
+
